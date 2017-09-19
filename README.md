@@ -1,4 +1,3 @@
-https://github.com/react-community/create-react-native-app
+Started with https://github.com/react-community/create-react-native-app
 
-Run app:
-`npm start`
+Run `yarn start`
