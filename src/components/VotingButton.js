@@ -29,7 +29,7 @@ const styles = StyleSheet.create({
   },
   label: {
     color: '#fff',
-    fontSize: '100px',
+    fontSize: 100,
     fontWeight: '600',
   }
 });

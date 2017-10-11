@@ -1,14 +1,21 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import VotingButton from './VotingButton.component';
+import VotingButton from './VotingButton';
 
 export default class Board extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      newItem: ''
+    }
   }
 
   vote (points) {
     console.log(`${points} points for ${this.props.currentTeam} team!`);
+    this.props.addVote(this.state.newItem);
+
+    this.setState({newItem: ''});
   }
 
   render() {
