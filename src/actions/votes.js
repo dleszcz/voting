@@ -5,9 +5,9 @@ export const ADD_VOTE_SUCCESS = 'ADD_VOTE_SUCCESS';
 
 export function addVote(title) {
   const id = Math.random().toString(36).substring(7);
-  const itemRef = votesRef.child(id);
+  const voteRef = votesRef.child(id);
 
-  itemRef.set({
+  voteRef.set({
     id,
     title: title,
     time: new Date().getTime()
@@ -18,9 +18,9 @@ export function addVote(title) {
   }
 }
 
-export function addVoteSuccess(itemData) {
+export function addVoteSuccess(voteData) {
   return {
     type: ADD_VOTE_SUCCESS,
-    itemData: itemData
+    voteData: voteData
   }
 }

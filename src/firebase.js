@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase';
-import { addVoteSuccess } from './actions/items';
+import { addVoteSuccess } from './actions/votes';
 
 import config from '../config';
 

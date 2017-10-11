@@ -1,11 +1,11 @@
-import { bindActionCreators } from 'redux'
-import { connect } from 'react-redux'
-import Board from '../components/Board'
-import * as ItemsActions from '../actions/items'
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import App from '../components/App';
+import * as ItemsActions from '../actions/votes';
 
 function mapStateToProps(state) {
   return {
-    votes: state.items.votesList,
+    votes: state.votes.votesList,
   }
 }
 
@@ -13,4 +13,4 @@ function mapDispatchToProps(dispatch) {
   return bindActionCreators(ItemsActions, dispatch)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Board)
+export default connect(mapStateToProps, mapDispatchToProps)(App)

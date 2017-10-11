@@ -1,11 +1,11 @@
-import { createStore, applyMiddleware } from 'redux'
-import thunk from 'redux-thunk'
-import reducer from '../reducers'
-import { syncFirebase } from '../firebase'
+import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
+import votes from '../reducers';
+import { syncFirebase } from '../firebase';
 
 export default function configureStore(initialState) {
   const store = createStore(
-    reducer,
+    votes,
     applyMiddleware(thunk)
   );
   syncFirebase(store);
@@ -17,5 +17,5 @@ export default function configureStore(initialState) {
     });
   }
 
-  return store
+  return store;
 }

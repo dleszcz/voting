@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import items from './items';
+import votes from './votes';
 
 export default combineReducers({
-  items
+  votes
 });
